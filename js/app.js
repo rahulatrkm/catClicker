@@ -1,10 +1,16 @@
-let clicks = 0;
-document.querySelector('#clickNumber').textContent = clicks;
+let click1 = 0;
+let click2 = 0;
+document.querySelector('.c1').textContent = click1;
+document.querySelector('.c2').textContent = click2;
 $('.cat1').append('Cat1<br> <img src="img/cat.jpg">');
-$('.cat2').append('Cat2<br> <img src="img/cat.jpg">');
-let clickHandler = function(e){
-  clicks += 1;
-  document.querySelector('#clickNumber').textContent = clicks;
+$('.cat2').append('Cat2<br> <img src="img/cat1.jpg">');
+let clickHandler1 = function(e){
+  click1 += 1;
+  document.querySelector('.c1').textContent = click1;
 };
-document.querySelector('img').addEventListener('click', clickHandler, false);
-document.querySelector('.cat2').addEventListener('click', clickHandler, false);
+let clickHandler2 = function(e){
+  click2 += 1;
+  document.querySelector('.c2').textContent = click2;
+};
+document.querySelector('img').addEventListener('click', clickHandler1, false);
+document.querySelector('.cat2').addEventListener('click', clickHandler2, false);
